@@ -28,7 +28,7 @@
             {
                 Console.WriteLine(ex.InnerException);
                 Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.WhenHappened);
+                Console.WriteLine(ex.WhenHappened); // Custom exception error message
                 Console.WriteLine("Customized Exception.");
             }
             catch (Exception ex)
@@ -41,7 +41,7 @@
         }
         static void Save(string text)
         {
-            if (string.IsNullOrEmpty(text))
+            if (string.IsNullOrEmpty(text)) // If text is null or empty, throws DateTime.Now
             {
                 throw new MyException(DateTime.Now);
             }
